@@ -10,7 +10,6 @@ import { deleteEducation } from '../../actions/profileActions';
 
 const Education = ({ education, deleteEducation }) => {
     const onDelete = (id) => {
-        console.log(`delete education ${id}`);
         deleteEducation(id);
     };
 
@@ -19,7 +18,6 @@ const Education = ({ education, deleteEducation }) => {
             <td> {edu.school}</td>
             <td className='hide-sm'>{edu.degree}</td>
             <td className='hide-sm'>
-                {' '}
                 <Moment format='YYYY/MM/DD'>{edu.from}</Moment> - {edu.to === null ? ' now' : <Moment format='YYYY/MM/DD'>{edu.to}</Moment>}{' '}
             </td>
             <td>

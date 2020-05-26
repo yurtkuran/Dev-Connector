@@ -40,7 +40,7 @@ export const getProfileById = (userid) => async (dispatch) => {
 // get users gitHub repos
 export const getGitHubRepos = (username) => async (dispatch) => {
     try {
-        const res = await axios.get(`/api/profile/githug/${username}`);
+        const res = await axios.get(`/api/profile/github/${username}`);
         dispatch({ type: GET_REPOS, payload: res.data });
     } catch (err) {
         dispatch({ type: PROFILE_ERROR, payload: { msg: err.response.data.msg, status: err.response.status } });
@@ -54,10 +54,11 @@ export const createProfile = (formData, history, edit = false) => async (dispatc
             'Content-Type': 'application/json',
         },
     };
-    const body = JSON.stringify(formData);
+    // const body = JSON.stringify(formData);
+    console.log(formData);
 
     try {
-        const res = await axios.post('/api/profile', body, config);
+        const res = await axios.post('/api/profile', formData, config);
         dispatch({
             type: UPDATE_PROFILE,
             payload: res.data,

@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 // bring in actions
-import Spinner from '../layout/Spinner';
 import { getGitHubRepos } from '../../actions/profileActions';
 
 const ProfileGithub = ({ getGitHubRepos, username, repos }) => {

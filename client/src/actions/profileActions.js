@@ -54,8 +54,6 @@ export const createProfile = (formData, history, edit = false) => async (dispatc
             'Content-Type': 'application/json',
         },
     };
-    // const body = JSON.stringify(formData);
-    console.log(formData);
 
     try {
         const res = await axios.post('/api/profile', formData, config);

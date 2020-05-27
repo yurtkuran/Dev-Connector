@@ -56,7 +56,7 @@ const Login = ({ setAlert, login, isAuthenticated }) => {
                     <input type='password' placeholder='Password' name='password' value={password} onChange={onChange} minLength='6' />
                 </div>
 
-                <input type='submit' value='Register' className='btn btn-primary' />
+                <input type='submit' value='Login' className='btn btn-primary' />
             </form>
 
             <p className='my-1'>

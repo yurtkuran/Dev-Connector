@@ -161,11 +161,8 @@ router.put('/unlike/:id', auth, async (req, res) => {
             return res.status(400).json({ msg: 'post is not yet liked' });
         }
 
-        // get index of like to remove
-        const removeIndex = post.likes.map((item) => item.id).indexOf(req.params.id);
-
-        // remove like
-        post.likes.splice(removeIndex, 1);
+        // remove  like
+        post.likes = post.likes.filter(({ user }) => user.toString() !== req.user.id);
 
         // save to database
         await post.save();

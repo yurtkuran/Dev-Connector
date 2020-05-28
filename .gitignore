@@ -5,7 +5,7 @@ node_modules/
 
 #config files
 /config/production.json
-/config/default.json
+#/config/default.json
 
 #misc imac files
 **/._*

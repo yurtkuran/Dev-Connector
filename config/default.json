@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb+srv://yurtkuran:1candy@codaffectioncrud-dvnxs.mongodb.net/dev-connector?retryWrites=true&w=majority",
+    "jwtSecret": "mysecret",
+    "githubClientID": "368211ecfc99cdafaf41",
+    "githubSecret": "d10642ef2505e0450d7810a6978e3bb6cdcc0c11"
+}

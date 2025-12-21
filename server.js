@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 
 // bring in local modules
 const connectDB = require('./config/db');
@@ -16,8 +17,7 @@ const app = express();
 app.use(express.json({ extended: false }));
 
 // inital route
-// app.get('/', (req, res) => res.json({ msg: 'Welcome to the ContactKeeper API...' }));
-app.get('/', (req, res) => res.send('api running'));
+// app.get('/', (req, res) => res.send('api running'));
 
 // define routes
 app.use('/api/users', require('./routes/users'));
